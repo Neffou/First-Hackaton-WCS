@@ -1,0 +1,89 @@
+<h1>Takes My Eggs Market Shop</h1>
+<p class="center">My credit: <span class="coins">{{myMoney}} $</span></p>
+<h2>Need a consommables?</h2>
+<div class="cont">
+  <div>
+    <p>Milk:</p>
+    <app-consommables></app-consommables>
+    <p><button type="button" class="btn btn-light" (click)="whenClick()">BUY</button></p>
+  </div>
+  <div>
+    <p>Chocolate:</p>
+    <app-chocolates></app-chocolates>
+    <p><button type="button" class="btn btn-light" (click)="whenClick()">BUY</button></p>
+  </div>
+</div>
+<h2>Or need a stuff for our quest?</h2>
+<div class="container">
+
+  <div class="row col-md-8 col-sm-8 col-xs-12">
+    <span *ngFor="let egg of eggArray" class="cent">
+      <img src="{{egg.image}}" alt="A egg picture.." class="hov col-md-12 col-sm-12 col-xs-12" />
+      <br />
+      <h4>{{egg.name}}</h4>
+      <h4>{{egg.rarity}}</h4>
+      <h4>{{egg.power}}</h4>
+      <p class="coins">{{ getRandomPrice() }} $ </p>
+      <br />
+      <button type="button" class="btn btn-light" (click)="whenClick()">BUY</button>
+    </span>
+  </div>
+
+  <div class="col-md-4 col-sm-8 col-xs-12">
+    <app-pnj></app-pnj>
+  </div>
+</div>
+<br/>
+
+  <h2>Sell your items !</h2>
+  <div class="tableinv">
+  <table>
+    <thead>
+      <tr>
+        <th>Rarity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Junk</td>
+        <td>100$</td>
+      </tr>
+      <tr>
+        <td>Basic</td>
+        <td>150$</td>
+      </tr>
+      <tr>
+        <td>Fine</td>
+        <td>200$</td>
+      </tr>
+      <tr>
+      <td>Masterwork</td>
+      <td>250$</td>
+      </tr>
+      <tr>
+        <td>Rare</td>
+        <td>300$</td>
+      </tr>
+      <tr>
+        <td>Exotic</td>
+        <td>350$</td>
+      </tr>
+      <tr>
+        <td>Ascended</td>
+        <td>400$</td>
+      </tr>
+      <tr>
+        <td>Legendary</td>
+        <td>450$</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<footer class="page-footer font-small" style="background-color: black;">
+  <div class="footer-copyright text-center py-3"><a href="../../assets/easteregg.jpg">©</a> 2019 Copyright:
+    <p>Thibault Durand [Github: Thibdr] & Quentin Moreau [Github: Zarbtinou] #Hackaton April 19th 2019, <a href="http://www.wildcodeschool.fr/">Wild Code School</a></p>
+  </div>
+</footer>

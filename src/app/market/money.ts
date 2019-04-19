@@ -1,0 +1,1 @@
+export let myMoney = 2000;

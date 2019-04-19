@@ -1,0 +1,14 @@
+<div class="cader">
+  <h2>Seller</h2>
+  <div class="bulle">
+    <p>Hello young adventurer, </p>
+    <p>what do you want for the rest of your adventure?</p>
+  </div>
+  <div *ngFor="let char of charArray">
+    <p>{{char.name}}</p>
+    <p><img src="{{char.image}}" /></p>
+    <p>Specie : {{char.species}}</p>
+    <p>Gender : {{char.gender}}</p>
+    <p>Origin : {{char.origin}}</p>
+  </div>
+</div>
