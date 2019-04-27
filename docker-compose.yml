@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+
+  battleofheroes:
+    container_name: battle_of_heroes
+    build: .
+    labels:
+      - traefik.enable=true
+      - traefik.frontend.rule=PathPrefixStrip:/battleofheroes
+      - traefik.docker.network=web
+      - traefik.port=80
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
