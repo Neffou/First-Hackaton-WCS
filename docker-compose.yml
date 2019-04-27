@@ -2,12 +2,12 @@ version: '3'
 
 services:
 
-  battleofheroes:
-    container_name: battle_of_heroes
+  takesmyeggs:
+    container_name: takesmyeggs
     build: .
     labels:
       - traefik.enable=true
-      - traefik.frontend.rule=PathPrefixStrip:/battleofheroes
+      - traefik.frontend.rule=PathPrefixStrip:/takesmyeggs
       - traefik.docker.network=web
       - traefik.port=80
     networks:
